@@ -414,16 +414,16 @@ def line_noti():
                             msg += " sensor2 use " + str(round(sensor2monthAgo,4)) + " unit"
                         elif(sensor2_2monthAgo < sensor2monthAgo):
                             msg += " sensor2 มีการใช้ไฟฟ้ามากกว่าเดือนก่อน " + str(round((sensor2monthAgo - sensor2_2monthAgo),4)) + " unit และใช้ไปทั้งหมด " + str(round(sensor2monthAgo,4)) + " unit"
-                        elif(sensor2_2monthAgo > sensor1today):
+                        elif(sensor2_2monthAgo > sensor2monthAgo):
                             msg += " sensor2 มีการใช้ไฟฟ้าน้อยกว่าเดือนก่อน " + str(round((sensor2_2monthAgo - sensor2monthAgo),4)) + " unit และใช้ไปทั้งหมด " + str(round(sensor2monthAgo,4)) + " unit"
                         else:
                             msg += " มีการใช้ไฟฟ้าที่ sensor2 ทั้งหมด " + str(round(sensor2monthAgo,4)) + "unit"
                         if(sensor3_2monthAgo == 0):
                             msg += " มีการใช้ไฟฟ้าที่ sensor3 ทั้งหมด " + str(round(sensor3monthAgo,4)) + " unit"
                         elif(sensor3_2monthAgo < sensor3monthAgo):
-                            msg += " sensor3 มีการใช้ไฟฟ้ามากกว่าเดือนก่อน " + str(round((sensor3monthAgo - sensor3_2monthAgo),4)) + " unit today use " + str(round(sensor3monthAgo,4))+ " unit"
+                            msg += " sensor3 มีการใช้ไฟฟ้ามากกว่าเดือนก่อน " + str(round((sensor3monthAgo - sensor3_2monthAgo),4)) + " unit และใช้ไปทั้งหมด " + str(round(sensor3monthAgo,4))+ " unit"
                         elif(sensor3_2monthAgo > sensor3monthAgo):
-                            msg += " sensor3 มีการใช้ไฟฟ้าน้อยกว่าเดือนก่อน " + str(round((sensor3_2monthAgo - sensor3monthAgo),4)) + " unit today use " + str(round(sensor3monthAgo,4)) + " unit"
+                            msg += " sensor3 มีการใช้ไฟฟ้าน้อยกว่าเดือนก่อน " + str(round((sensor3_2monthAgo - sensor3monthAgo),4)) + " unit และใช้ไปทั้งหมด " + str(round(sensor3monthAgo,4)) + " unit"
                         else:
                             msg += " มีการใช้ไฟฟ้าที่ sensor3 ทั้งหมด " + str(round(sensor3monthAgo,4)) + "unit"
                         msgStatus = line_text(msg,notiQueryresult[i][1]) #send message to line noti and return status code
